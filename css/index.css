@@ -1,0 +1,78 @@
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Manrope', sans-serif;
+    color: hsl(217, 19%, 35%);
+}
+
+#articles {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    height: 95vh;
+}
+
+.article-component {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+.article-component p {
+    font-size: 13px;
+}
+
+.art-img img {
+    float: left;
+    transform: scale(50%);
+    width: 250px;
+    height: 250px;
+}
+
+.art-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+}
+
+.art-content h3 {
+    font-weight: 700;
+    margin: 0;
+}
+
+.art-extra {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.art-user {
+    flex-grow: 1;
+    padding: 0 10px;
+}
+
+.avatar {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.art-user h5 {
+    font-weight: 500;
+    margin: 0;
+}
+
+.art-user p {
+    margin: 0;
+}
+
+.art-content button {
+    height: 25px;
+    width: 25px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+}
