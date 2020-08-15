@@ -2,77 +2,124 @@ body {
     background-color: hsl(210, 46%, 95%);
     font-family: 'Manrope', sans-serif;
     color: hsl(217, 19%, 35%);
+    font-size: 0.75rem;
+    margin: 0;
 }
 
-#articles {
-    display: flex;
-    align-items: center;
-    width: 50%;
+img {
+    width: 100%;
+}
+
+button {
+    border: none;
+}
+
+/**********
+Typography  
+*/
+
+h3, 
+p {
+    margin: 0;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+p {
+    font-weight: 500;
+}
+
+.article-author {
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+/**********
+Layout   
+*/
+
+.container {
+    width: 90%;
     margin: 0 auto;
-    height: 95vh;
+    display: flex;
+    align-content: center;
 }
 
-.article-component {
+.article-preview {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5em 0;
     overflow: hidden;
     background-color: white;
     border-radius: 10px;
 }
 
-
-.article-component p {
-    font-size: 13px;
+.article-image {
+    object-fit: cover;
+    max-height: 275px;
+    margin-bottom: 1.5em;
 }
 
-.art-img img {
-    float: left;
-    transform: scale(50%);
-    width: 250px;
-    height: 250px;
+.article-content,
+.article-extra {
+    padding: 0 3em;
+    margin: 1.5em 0;
 }
 
-.art-content {
+.article-content {
     display: flex;
     flex-direction: column;
-    padding: 0 5%;
 }
 
-.art-content h3 {
-    font-weight: 700;
-    margin: 0;
-}
-
-.art-extra {
+.article-extra {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.article-meta {
+    display: flex;
+}
+
+.avatar-image {
+    width: 3em;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.article-author-date {
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    align-content: center;
+    padding-left: 1.5em;
 }
 
-.art-user {
-    flex-grow: 1;
-    padding: 0 10px;
-}
-
-.avatar {
-    height: 35px;
-    width: 35px;
+.share {
+    width: 2em;
     border-radius: 50%;
+    padding: .5em;
 }
 
-.art-user h5 {
-    font-weight: 500;
-    margin: 0;
-}
+/**********
+@Media   
+*/
 
-.art-user p {
-    margin: 0;
-}
+@media screen and (min-width: 600px) {
+    .container {
+        width: 50%;
+    }
 
-.art-content button {
-    height: 25px;
-    width: 25px;
-    padding: 0;
-    border: none;
-    border-radius: 50%;
+    .article-preview {
+        flex-direction: row;
+        margin: 0;
+    }
+
+    .article-image {
+        width: 30%;
+        margin: 0;
+    }
 }
